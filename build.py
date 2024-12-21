@@ -1,4 +1,5 @@
-import os
+# build.py
+
 import platform
 import subprocess
 import sys
@@ -31,13 +32,5 @@ def build_shared_library():
         print("Error during compilation. Please check your setup.")
         sys.exit(1)
 
-def main():
-    """Main entry point for automating the setup and run."""
-    print("Starting automation...")
-    build_shared_library()
-    print("Shared library built successfully.")
-    print("Running the Sudoku application...")
-    os.system("python3 main.py")
-
 if __name__ == "__main__":
-    main()
+    build_shared_library()

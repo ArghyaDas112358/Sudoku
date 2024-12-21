@@ -137,6 +137,6 @@ def test_run(empty_cells_ratio= 0.3):
 
 
 if __name__ == "__main__":
-    main(theme="Classic", empty_cells_ratio=0.3)
+    main(theme="Classic", empty_cells_ratio=0.7)
     # test_run(empty_cells_ratio=0.3)
 

@@ -18,3 +18,43 @@ bool isValidPlacement(std::vector<std::vector<int>>& grid, int row, int col, int
     }
     return true;
 }
+
+bool solveBoard(std::vector<std::vector<int>>& grid) {
+    for (int row = 0; row < 9; row++) {
+        for (int col = 0; col < 9; col++) {
+            if (grid[row][col] == 0) { // If cell is empty
+                for (int num = 1; num <= 9; num++) { // Try numbers 1-9
+                    if (isValidPlacement(grid, row, col, num)) {
+                        grid[row][col] = num;
+                        if (solveBoard(grid)) {
+                            return true;
+                        }
+                        grid[row][col] = 0; // Backtrack
+                    }
+                }
+                return false; // No valid number found
+            }
+        }
+    }
+    return true; // Board is solved
+}
+
+int countSolutions(std::vector<std::vector<int>>& grid) {
+    int solutionCount = 0;
+
+    for (int row = 0; row < 9; row++) {
+        for (int col = 0; col < 9; col++) {
+            if (grid[row][col] == 0) { // If cell is empty
+                for (int num = 1; num <= 9; num++) { // Try numbers 1-9
+                    if (isValidPlacement(grid, row, col, num)) {
+                        grid[row][col] = num;
+                        solutionCount += countSolutions(grid); // Recursive call
+                        grid[row][col] = 0; // Backtrack
+                    }
+                }
+                return solutionCount; // Return after exploring this branch
+            }
+        }
+    }
+    return 1; // If no empty cells, we found a solution
+}

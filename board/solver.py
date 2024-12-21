@@ -2,41 +2,24 @@
 # solver.py
 #################################################################
 
-from copy import deepcopy
-from board.validator import is_valid_placement
+from  board.solver_lib import solveBoard, countSolutions, isValidPlacement
+
+def is_valid_placement(sudoku_grid, row, col, num):
+    """
+    Use the C++ implementation of isValidPlacement to validate placements.
+    """
+    converted_grid = [[cell if cell is not None else 0 for cell in row] for row in sudoku_grid]
+    return isValidPlacement(converted_grid, row, col, num)
 
 def solve_board(sudoku_grid):
-    for row in range(9):
-        for col in range(9):
-            if sudoku_grid[row][col] is None:
-                for num in range(1, 10):  # Try numbers 1-9
-                    if is_valid_placement(sudoku_grid, row, col, num):
-                        sudoku_grid[row][col] = num
-                        solved = solve_board(sudoku_grid)  # Recursive call
-                        if solved:
-                            return sudoku_grid
-                        sudoku_grid[row][col] = None  # Backtrack
-                return None  # Trigger backtracking if no number works
-    return sudoku_grid  # Return solved grid if no empty cells remain
-
+    converted_grid = [[cell if cell is not None else 0 for cell in row] for row in sudoku_grid]
+    solved = solveBoard(converted_grid) # Call the C++ function
+    solved_grid = [[cell if cell != 0 else None for cell in row] for row in converted_grid]
+    return solved_grid if solved else None
 
 def count_solutions(sudoku_grid):
-    solution_count = [0]  # Mutable container to keep track of solutions
-
-    def backtrack_count(grid):
-        for row in range(9):
-            for col in range(9):
-                if grid[row][col] is None:
-                    for num in range(1, 10):
-                        if is_valid_placement(grid, row, col, num):
-                            grid[row][col] = num
-                            backtrack_count(grid)
-                            grid[row][col] = None  # Backtrack
-                    return  # Return early after exploring this branch
-        solution_count[0] += 1
-
-    backtrack_count(deepcopy(sudoku_grid))  # Use a copy to avoid modifying the original
-    return solution_count[0]
+    converted_grid = [[cell if cell is not None else 0 for cell in row] for row in sudoku_grid]
+    return countSolutions(converted_grid)
 
 if __name__ == "__main__":
     # Example board

@@ -53,7 +53,7 @@ def is_board_valid(sudoku_grid):
 def is_board_complete(sudoku_grid): # No None present
     return all(cell is not None for row in sudoku_grid for cell in row)
 
-from board.solver_lib import isValidPlacement# Import the Pybind11 module as solver_lib
+from board.solver_lib import isValidPlacement
 
 def is_valid_placement(sudoku_grid, row, col, num):
     """
