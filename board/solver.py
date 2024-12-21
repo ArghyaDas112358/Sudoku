@@ -2,7 +2,7 @@
 # solver.py
 #################################################################
 
-from  board.solver_lib import solveBoard, countSolutions, isValidPlacement
+from board.solver_lib import solveBoard, countSolutions, isValidPlacement
 
 def is_valid_placement(sudoku_grid, row, col, num):
     """

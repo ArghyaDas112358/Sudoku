@@ -40,7 +40,6 @@ def generate_board(empty_cells_ratio=0.3):
 
     return sudoku_grid
 
-
 def generate_board_with_one_solution(empty_cells_ratio=0.3):
     """Generate a Sudoku board with only one solution."""
     # Step 1: Generate a fully solved Sudoku board
