@@ -9,21 +9,35 @@ A comprehensive Sudoku project that includes:
 
 ## Screenshots
 
-### Classic Theme
-
-![Classic Theme](https://github.com/ArghyaDas112358/Sudoku/blob/main/images/themes/Classic.png?raw=true)   
-
-### Solar Flare Theme
-
-![Golden Classic Theme](https://github.com/ArghyaDas112358/Sudoku/blob/main/images/themes/Solar_Flare.png?raw=true)
-
-## Ice Cold Theme
-
-![Ice Cold Theme](https://github.com/ArghyaDas112358/Sudoku/blob/main/images/themes/Ice_Cold.png?raw=true)
-
-### Dark Theme
-
-![Dark Theme](https://github.com/ArghyaDas112358/Sudoku/blob/main/images/themes/Dark_Mode.png?raw=true)
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="https://github.com/ArghyaDas112358/Sudoku/blob/main/images/themes/Classic.png?raw=true" alt="Classic Theme" width="200"/>
+        <br>
+        <strong>Classic Theme</strong>
+      </td>
+      <td align="center">
+        <img src="https://github.com/ArghyaDas112358/Sudoku/blob/main/images/themes/Solar_Flare.png?raw=true" alt="Solar Flare Theme" width="200"/>
+        <br>
+        <strong>Solar Flare Theme</strong>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="https://github.com/ArghyaDas112358/Sudoku/blob/main/images/themes/Ice_Cold.png?raw=true" alt="Ice Cold Theme" width="200"/>
+        <br>
+        <strong>Ice Cold Theme</strong>
+      </td>
+      <td align="center">
+        <img src="https://github.com/ArghyaDas112358/Sudoku/blob/main/images/themes/Dark_Mode.png?raw=true" alt="Dark Theme" width="200"/>
+        <br>
+        <strong>Dark Theme</strong>
+      </td>
+    </tr>
+  </table>
+</div>
+There are various other themes available namely:  Golden Classic, Cyberpunk, Forest Whisper, Ocean Breeze, Peach Blossom, Sunset Glow, Retro Neon, Midnight Bliss, Autumn Leaves, Candy Crush, Winter Frost etc.
 
 
 
