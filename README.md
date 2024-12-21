@@ -13,30 +13,59 @@ A comprehensive Sudoku project that includes:
   <table>
     <tr>
       <td align="center">
-        <img src="https://github.com/ArghyaDas112358/Sudoku/blob/main/images/themes/Classic.png?raw=true" alt="Classic Theme" width="200"/>
+        <img src="https://github.com/ArghyaDas112358/Sudoku/blob/main/images/themes/Classic.png?raw=true" alt="Classic Theme" width="150"/>
         <br>
         <strong>Classic Theme</strong>
       </td>
       <td align="center">
-        <img src="https://github.com/ArghyaDas112358/Sudoku/blob/main/images/themes/Solar_Flare.png?raw=true" alt="Solar Flare Theme" width="200"/>
+        <img src="https://github.com/ArghyaDas112358/Sudoku/blob/main/images/themes/Solar_Flare.png?raw=true" alt="Solar Flare Theme" width="150"/>
         <br>
         <strong>Solar Flare Theme</strong>
+      </td>
+      <td align="center">
+        <img src="https://github.com/ArghyaDas112358/Sudoku/blob/main/images/themes/Ice_Cold.png?raw=true" alt="Ice Cold Theme" width="150"/>
+        <br>
+        <strong>Ice Cold Theme</strong>
       </td>
     </tr>
     <tr>
       <td align="center">
-        <img src="https://github.com/ArghyaDas112358/Sudoku/blob/main/images/themes/Ice_Cold.png?raw=true" alt="Ice Cold Theme" width="200"/>
+        <img src="https://github.com/ArghyaDas112358/Sudoku/blob/main/images/themes/Dark_Mode.png?raw=true" alt="Dark Mode Theme" width="150"/>
         <br>
-        <strong>Ice Cold Theme</strong>
+        <strong>Dark Mode Theme</strong>
       </td>
       <td align="center">
-        <img src="https://github.com/ArghyaDas112358/Sudoku/blob/main/images/themes/Dark_Mode.png?raw=true" alt="Dark Theme" width="200"/>
+        <img src="https://github.com/ArghyaDas112358/Sudoku/blob/main/images/themes/Forest_Whisper.png?raw=true" alt="Forest Whisper Theme" width="150"/>
         <br>
-        <strong>Dark Theme</strong>
+        <strong>Forest Whisper Theme</strong>
+      </td>
+      <td align="center">
+        <img src="https://github.com/ArghyaDas112358/Sudoku/blob/main/images/themes/Retro_Neon.png?raw=true" alt="Retro Neon Theme" width="150"/>
+        <br>
+        <strong>Retro Neon Theme</strong>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="https://github.com/ArghyaDas112358/Sudoku/blob/main/images/themes/Golden_Classic.png?raw=true" alt="Golden Classic Theme" width="150"/>
+        <br>
+        <strong>Golden Classic Theme</strong>
+      </td>
+      <td align="center">
+        <img src="https://github.com/ArghyaDas112358/Sudoku/blob/main/images/themes/Midnight_Bliss.png?raw=true" alt="Midnight Bliss Theme" width="150"/>
+        <br>
+        <strong>Midnight Bliss Theme</strong>
+      </td>
+      <td align="center">
+        <img src="https://github.com/ArghyaDas112358/Sudoku/blob/main/images/themes/Autumn_Leaves.png?raw=true" alt="Autumn Leaves Theme" width="150"/>
+        <br>
+        <strong>Autumn Leaves Theme</strong>
       </td>
     </tr>
   </table>
 </div>
+
+
 There are various other themes available namely:  Golden Classic, Cyberpunk, Forest Whisper, Ocean Breeze, Peach Blossom, Sunset Glow, Retro Neon, Midnight Bliss, Autumn Leaves, Candy Crush, Winter Frost etc.
 
 
