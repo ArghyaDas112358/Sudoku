@@ -9,6 +9,7 @@ env/
 # Ignore IDE/Editor settings
 .idea/
 .vscode/
+.pyi
 
 # Ignore logs and temporary files
 *.log
