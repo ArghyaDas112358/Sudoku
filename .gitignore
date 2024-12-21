@@ -1,10 +1,35 @@
+# Ignore Python bytecode
 __pycache__/
 *.py[cod]
+
+# Ignore virtual environments
 venv/
 env/
+
+# Ignore IDE/Editor settings
 .idea/
 .vscode/
+
+# Ignore logs and temporary files
 *.log
 *.tmp
+
+# Ignore system-specific files
 .DS_Store
 Thumbs.db
+
+# Ignore shared object files and other compiled files
+*.so
+*.dll
+*.dylib
+*.out
+*.exe
+
+# Ignore build artifacts
+build/
+dist/
+*.o
+*.a
+*.pdb
+*.lib
+*.obj
