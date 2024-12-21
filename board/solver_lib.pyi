@@ -1,3 +1,0 @@
-from typing import List
-
-def isValidPlacement(grid: List[List[int]], row: int, col: int, num: int) -> bool: ...
