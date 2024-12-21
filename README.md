@@ -1,4 +1,4 @@
-# Sudoku
+# 🧩 Sudoku
 
 A comprehensive Sudoku project that includes:
  - **Board Generation**
@@ -7,7 +7,7 @@ A comprehensive Sudoku project that includes:
  - **GUI** (PyGame)
 
 
-## Screenshots
+## 📸 Screenshots
 
 <div align="center">
   <table>
@@ -66,12 +66,10 @@ A comprehensive Sudoku project that includes:
 </div>
 
 
-There are various other themes available namely:  Golden Classic, Cyberpunk, Forest Whisper, Ocean Breeze, Peach Blossom, Sunset Glow, Retro Neon, Midnight Bliss, Autumn Leaves, Candy Crush, Winter Frost etc.
+There are various other themes available namely: Cyberpunk, Ocean Breeze, Peach Blossom, Sunset Glow, Candy Crush, Winter Frost etc.
 
 
-
-
-## Project Structure
+## 📁 Project Structure
 
 ```bash
 .
@@ -94,7 +92,7 @@ There are various other themes available namely:  Golden Classic, Cyberpunk, For
 ```
 
 
-## Installation
+## 🛠️ Installation
 
 1. Clone the GitHub repository:
  ```bash     
@@ -121,7 +119,7 @@ There are various other themes available namely:  Golden Classic, Cyberpunk, For
  This will generate the shared library `board/solver_lib.so` in the `board` directory.
 
 
-## Usage
+## 🚀 Usage
 Simply run:
 
 ```bash
@@ -129,14 +127,14 @@ python main.py
 ```
 This launches the Sudoku board in both the terminal and the Pygame GUI.
 
-### GUI Controls
+### 🎮 GUI Controls
  - **Navigation**: Use the arrow keys or mouse to select cells.
  - **Checking**: The Check button verifies the current entries.
  - **Refresh**: The Refresh button resets the board.
  - **Hint**: The Hint button, when pressed for 2 seconds, reveals a solution for the selected cell.
 
 
-### Theming
+### 🎨 Theming
 The GUI’s appearance is governed by the `theme.py` file, which contains a dictionary of possible themes. You can modify or add themes in `THEMES` within `theme.py`. By default, the `"Classic"` theme is used.
 
 To preview themes:
@@ -146,12 +144,12 @@ python -m display.gui
 ```
 Screenshots of the current board will be saved to the `images/themes` directory.
 
-## Contributing
+## 🤝 Contributing
 
-Pull requests are welcome! 
+Pull requests are welcomed! 
 For significant changes, please open an issue first to discuss your ideas and proposed modifications.
 
-## License
+## 📜 License
 
 This project is licensed under the MIT License.
 
