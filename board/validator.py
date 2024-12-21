@@ -50,12 +50,15 @@ def is_board_valid(sudoku_grid):
            is_board_with_valid_subgrids(sudoku_grid)
 
 
-def is_valid_placement(sudoku_grid, row, col, num):
-    if sudoku_grid[row][col] != None:
-        return False
-    tmp_sudoku_grid = deepcopy(sudoku_grid)
-    tmp_sudoku_grid[row][col] = num
-    return is_board_valid(tmp_sudoku_grid)
-
 def is_board_complete(sudoku_grid): # No None present
     return all(cell is not None for row in sudoku_grid for cell in row)
+
+from board.solver_lib import isValidPlacement# Import the Pybind11 module as solver_lib
+
+def is_valid_placement(sudoku_grid, row, col, num):
+    """
+    Use the C++ implementation of isValidPlacement to validate placements.
+    """
+    converted_grid = [[cell if cell is not None else 0 for cell in row] for row in sudoku_grid]
+    return isValidPlacement(converted_grid, row, col, num)
+
