@@ -26,6 +26,8 @@ HEIGHT = 720
 dx = WIDTH // 9
 dy = HEIGHT // 9
 
+HINT_DURATION = 2  # seconds
+
 DEFAULT_POSITIONS = {
     "check_button":   [1.0 * dx,    610,    1.5 * dx,     50],
     "time_display":   [3.27 * dx,   610,    2.5 * dx,     50],
@@ -148,7 +150,7 @@ class SudokuDisplay:
     def is_hint_active(self):
         # Ensure this function always returns a boolean
         if self.showing_hint and self.hint_start_time is not None:
-            if time.time() - self.hint_start_time < 2:
+            if time.time() - self.hint_start_time < HINT_DURATION:
                 return True
             else:
                 # Reset hint state after 2 seconds

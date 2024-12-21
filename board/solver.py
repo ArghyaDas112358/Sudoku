@@ -3,7 +3,7 @@
 #################################################################
 
 from copy import deepcopy
-from .validator import is_valid_placement
+from board.validator import is_valid_placement
 
 def solve_board(sudoku_grid):
     for row in range(9):
