@@ -6,6 +6,28 @@ A comprehensive Sudoku project that includes:
  - **Board Solver** (C++ bindings via pybind11)
  - **GUI** (PyGame)
 
+
+## Screenshots
+
+### Classic Theme
+
+![Classic Theme](https://github.com/ArghyaDas112358/Sudoku/blob/main/images/themes/Classic.png?raw=true)   
+
+### Solar Flare Theme
+
+![Golden Classic Theme](https://github.com/ArghyaDas112358/Sudoku/blob/main/images/themes/Solar_Flare.png?raw=true)
+
+## Ice Cold Theme
+
+![Ice Cold Theme](https://github.com/ArghyaDas112358/Sudoku/blob/main/images/themes/Ice_Cold.png?raw=true)
+
+### Dark Theme
+
+![Dark Theme](https://github.com/ArghyaDas112358/Sudoku/blob/main/images/themes/Dark_Mode.png?raw=true)
+
+
+
+
 ## Project Structure
 
 ```bash
