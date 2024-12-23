@@ -73,22 +73,30 @@ There are various other themes available namely: Cyberpunk, Ocean Breeze, Peach 
 
 ```bash
 .
-├── board
-│   ├── generator.py       # Functions to generate sudoku boards
-│   ├── __init__.py        # Python package initializer
-│   ├── Makefile           # Builds the C++ shared library
-│   ├── solver.cpp         # C++ solver implementation
-│   ├── solver.h           # C++ solver header
-│   ├── solver.py          # Python solver (falls back to Python logic if needed)
-│   ├── validator.py       # Validation logic for rows, columns, subgrids
-│   └── wrapper.cpp        # C++ to Python binding using Pybind11
-├── build.py               # Python script to automate building the shared library
-├── display
-│   ├── gui.py             # GUI logic using Pygame
-│   ├── __init__.py        # Python package initializer
-│   └── theme.py           # Theming for the GUI
-├── main.py                # Main script to run the Sudoku application
-└── README.md              # Project documentation
+├── build.py                # Script to build the shared library
+├── LICENSE                 # Licensing information
+├── main.py                 # Entry point or testing script
+├── README.md               # Project description
+├── requirements.txt        # Project dependencies
+├── setup.py                # For packaging and distribution
+└── src
+    ├── board               # Core logic and integration
+    │   ├── generator.py    # Generates Sudoku puzzles
+    │   ├── __init__.py     # Marks the module
+    │   ├── solver.py       # Solver logic, uses `solver_lib.so`
+    │   └── validator.py    # Validation logic
+    ├── cpp                 # C++ source files for `solver_lib.so`
+    │   ├── include
+    │   │   └── solver.h    # Header file for C++ logic
+    │   ├── Makefile        # Makefile to build `solver_lib.so`
+    │   └── src
+    │       ├── solver.cpp  # Solver implementation
+    │       └── wrapper.cpp # Pybind11 wrapper
+    ├── display             # GUI and visual elements
+    │   ├── gui.py          # Pygame-based GUI
+    │   ├── __init__.py     # Marks the module
+    │   └── theme.py        # Handles visual theming
+    └── __init__.py         # Marks `src` as a package
 ```
 
 
