@@ -9,7 +9,7 @@ import os
 import re
 import json
 
-from display.theme import THEMES
+from .theme import THEMES
 
 KEY_TO_NUMBER = {
     pygame.K_1: 1, pygame.K_2: 2, pygame.K_3: 3,

@@ -2,7 +2,16 @@
 # solver.py
 #################################################################
 
-from board.solver_lib import solveBoardReturn, countSolutions, isValidPlacement
+import os
+import sys
+
+# Dynamically add the `build` directory to the system path
+BUILD_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../build"))
+if BUILD_DIR not in sys.path:
+    sys.path.append(BUILD_DIR)
+
+# Import the shared library functions directly
+from solver_lib import solveBoardReturn, countSolutions, isValidPlacement
 
 def is_valid_placement(sudoku_grid, row, col, num):
     """

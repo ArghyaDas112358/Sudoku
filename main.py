@@ -5,10 +5,10 @@
 import time
 import copy
 
-from display.gui import SudokuDisplay
-from board.generator import generate_board_with_one_solution, display_board_terminal
-from board.validator import is_valid_placement, is_board_valid, is_board_complete
-from board.solver import count_solutions, solve_board
+from src.display.gui import SudokuDisplay
+from src.board.generator import generate_board_with_one_solution, display_board_terminal
+from src.board.validator import is_valid_placement, is_board_valid, is_board_complete
+from src.board.solver import count_solutions, solve_board
 
 
 def main(theme = "Classic", empty_cells_ratio = 0.7):
@@ -98,8 +98,8 @@ def main(theme = "Classic", empty_cells_ratio = 0.7):
 
                 print("Original Board:")
                 display_board_terminal(sudoku_grid)
-                print("Solved Board:")
-                display_board_terminal(solved_sudoku_grid)
+                # print("Solved Board:")
+                # display_board_terminal(solved_sudoku_grid)
 
                 display.sudoku_grid = sudoku_grid
                 display.given_cells = given_cells
@@ -143,13 +143,13 @@ def test_run(empty_cells_ratio= 0.3):
 
         print("Original Board:")
         display_board_terminal(sudoku_grid)
-        print("Solved Board:")
-        display_board_terminal(solved_sudoku_grid)
+        # print("Solved Board:")
+        # display_board_terminal(solved_sudoku_grid)
     else:
         print(f"The Sudoku has {solutions} solutions.")
 
 
 if __name__ == "__main__":
-    main(theme="Classic", empty_cells_ratio=0.7)
+    main(theme="Classic", empty_cells_ratio=0.9)
     # test_run(empty_cells_ratio=0.7)
 

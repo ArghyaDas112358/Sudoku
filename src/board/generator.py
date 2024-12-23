@@ -1,9 +1,9 @@
 #################################################################
-# generator.py
+# board/generator.py
 #################################################################
 
-from board.validator import is_valid_placement, is_board_valid
-from board.solver import count_solutions
+from .validator import is_valid_placement, is_board_valid
+from .solver import count_solutions
 import random
 
 def fill_board_backtracking(sudoku_grid):

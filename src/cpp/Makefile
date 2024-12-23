@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -O3 -Wall -std=c++11 -fPIC `python3 -m pybind11 --includes`
+CXXFLAGS = -O3 -Wall -std=c++11 -fPIC `python3 -m pybind11 --includes` -Iinclude
 
 UNAME := $(shell uname)
 ifeq ($(UNAME), Darwin)
@@ -10,8 +10,9 @@ else ifeq ($(UNAME), Windows)
     LIB_EXT = pyd  # Windows uses .pyd for Python modules
 endif
 
-TARGET = solver_lib.$(LIB_EXT)  # Updated to solver_lib
-SRC = wrapper.cpp solver.cpp
+OUTPUT_DIR ?= .   # Default output directory is current directory
+TARGET = $(OUTPUT_DIR)/solver_lib.$(LIB_EXT)
+SRC = src/wrapper.cpp src/solver.cpp
 
 all: $(TARGET)
 
@@ -19,6 +20,6 @@ $(TARGET): $(SRC)
 	$(CXX) $(CXXFLAGS) -shared -o $@ $^ `python3-config --ldflags`
 
 clean:
-	rm -f $(TARGET)
+	rm -f $(OUTPUT_DIR)/solver_lib.$(LIB_EXT)
 
 .PHONY: all clean

@@ -2,6 +2,16 @@
 # validator.py
 #################################################################
 
+import os
+import sys
+
+# Dynamically add the `build` directory to the system path
+BUILD_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../build"))
+if BUILD_DIR not in sys.path:
+    sys.path.append(BUILD_DIR)
+
+from solver_lib import isValidPlacement
+
 def is_unique(numbers):
     """Check if the list contains unique numbers (ignoring None)."""
     nums = [num for num in numbers if num is not None]
@@ -51,7 +61,6 @@ def is_board_valid(sudoku_grid):
 def is_board_complete(sudoku_grid): # No None present
     return all(cell is not None for row in sudoku_grid for cell in row)
 
-from board.solver_lib import isValidPlacement
 
 def is_valid_placement(sudoku_grid, row, col, num):
     """
