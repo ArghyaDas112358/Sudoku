@@ -1,11 +1,13 @@
 #ifndef SOLVER_H
 #define SOLVER_H
 
-#include <vector>
+#include <array>
 
-bool isValidPlacement(std::vector<std::vector<int>>& grid, int row, int col, int num);
-bool solveBoard(std::vector<std::vector<int>>& grid);
-int countSolutions(std::vector<std::vector<int>>& grid);
-std::vector<std::vector<int>> solveBoardReturn(std::vector<std::vector<int>> grid);
+typedef std::array<std::array<int, 9>, 9> SudokuGrid;
+
+bool isValidPlacement(SudokuGrid& grid, int row, int col, int num);
+bool solveBoard(SudokuGrid& grid);
+int countSolutions(SudokuGrid& grid);
+SudokuGrid solveBoardReturn(SudokuGrid grid);
 
 #endif

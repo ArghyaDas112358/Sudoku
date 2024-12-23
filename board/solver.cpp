@@ -1,11 +1,10 @@
 // board/solver.cpp
 
-#include <vector>
 #include <iostream>
 #include "solver.h"
 
 // Check if placing `num` in `grid[row][col]` is valid
-bool isValidPlacement(std::vector<std::vector<int>>& grid, int row, int col, int num) {
+bool isValidPlacement(SudokuGrid& grid, int row, int col, int num) {
     for (int i = 0; i < 9; i++) {
         if (grid[row][i] == num || grid[i][col] == num) {
             return false;
@@ -24,7 +23,7 @@ bool isValidPlacement(std::vector<std::vector<int>>& grid, int row, int col, int
 }
 
 
-bool solveBoard(std::vector<std::vector<int>>& grid) {
+bool solveBoard(SudokuGrid& grid) {
     for (int row = 0; row < 9; row++) {
         for (int col = 0; col < 9; col++) {
             if (grid[row][col] == 0) { // If cell is empty
@@ -45,12 +44,12 @@ bool solveBoard(std::vector<std::vector<int>>& grid) {
 }
 
 // Returns the solved board (in-place by reference solving is having problem)
-std::vector<std::vector<int>> solveBoardReturn(std::vector<std::vector<int>> grid) {
+SudokuGrid solveBoardReturn(SudokuGrid grid) {
     solveBoard(grid);
     return grid;
 }
 
-int countSolutions(std::vector<std::vector<int>>& grid) {
+int countSolutions(SudokuGrid& grid) {
     int solutionCount = 0;
 
     for (int row = 0; row < 9; row++) {
@@ -71,7 +70,7 @@ int countSolutions(std::vector<std::vector<int>>& grid) {
 }
 
 
-void printGrid(const std::vector<std::vector<int>>& grid) {
+void printGrid(const SudokuGrid& grid) {
     for (const auto& row : grid) {
         for (int cell : row) {
             if (cell == 0) {
@@ -86,17 +85,17 @@ void printGrid(const std::vector<std::vector<int>>& grid) {
 
 int main() {
     // Example Sudoku grid
-    std::vector<std::vector<int>> grid = {
-        {5, 3, 0, 0, 7, 0, 0, 0, 0},
-        {6, 0, 0, 1, 9, 5, 0, 0, 0},
-        {0, 9, 8, 0, 0, 0, 0, 6, 0},
-        {8, 0, 0, 0, 6, 0, 0, 0, 3},
-        {4, 0, 0, 8, 0, 3, 0, 0, 1},
-        {7, 0, 0, 0, 2, 0, 0, 0, 6},
-        {0, 6, 0, 0, 0, 0, 2, 8, 0},
-        {0, 0, 0, 4, 1, 9, 0, 0, 5},
-        {0, 0, 0, 0, 8, 0, 0, 7, 9},
-    };
+    SudokuGrid grid = {{
+        {{5, 3, 0, 0, 7, 0, 0, 0, 0}},
+        {{6, 0, 0, 1, 9, 5, 0, 0, 0}},
+        {{0, 9, 8, 0, 0, 0, 0, 6, 0}},
+        {{8, 0, 0, 0, 6, 0, 0, 0, 3}},
+        {{4, 0, 0, 8, 0, 3, 0, 0, 1}},
+        {{7, 0, 0, 0, 2, 0, 0, 0, 6}},
+        {{0, 6, 0, 0, 0, 0, 2, 8, 0}},
+        {{0, 0, 0, 4, 1, 9, 0, 0, 5}},
+        {{0, 0, 0, 0, 8, 0, 0, 7, 9}}
+    }};
 
     std::cout << "Original grid:" << std::endl;
     printGrid(grid);
@@ -110,7 +109,7 @@ int main() {
     }
 
     // Test the solution counter
-    std::vector<std::vector<int>> gridForCount = grid; // Reset grid for counting
+    SudokuGrid gridForCount = grid; // Reset grid for counting
     int solutions = countSolutions(gridForCount);
     std::cout << "Number of solutions: " << solutions << std::endl;
 

@@ -6,7 +6,7 @@ import time
 import copy
 
 from display.gui import SudokuDisplay
-from board.generator import generate_board, generate_board_with_one_solution, display_board_terminal
+from board.generator import generate_board_with_one_solution, display_board_terminal
 from board.validator import is_valid_placement, is_board_valid, is_board_complete
 from board.solver import count_solutions, solve_board
 
@@ -26,8 +26,8 @@ def main(theme = "Classic", empty_cells_ratio = 0.7):
 
     print("Original Board:")
     display_board_terminal(sudoku_grid)
-    print("Solved Board:")
-    display_board_terminal(solved_sudoku_grid)
+    # print("Solved Board:")
+    # display_board_terminal(solved_sudoku_grid)
 
     display = SudokuDisplay(sudoku_grid=sudoku_grid,
                             solved_sudoku_grid=solved_sudoku_grid,
