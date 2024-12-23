@@ -8,8 +8,16 @@ import pygame
 import os
 import re
 import json
+import sys
 
 from .theme import THEMES
+
+
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
+if PROJECT_ROOT not in sys.path:
+    sys.path.append(PROJECT_ROOT)
+
+ICON_PATH = os.path.join(PROJECT_ROOT, "images", "icon.png")
 
 KEY_TO_NUMBER = {
     pygame.K_1: 1, pygame.K_2: 2, pygame.K_3: 3,
@@ -59,6 +67,7 @@ class SudokuDisplay:
         if renderer == "screen":
             self.screen = pygame.display.set_mode((self.width, self.height))
             pygame.display.set_caption("Sudoku")
+            pygame.display.set_icon(pygame.image.load(ICON_PATH))
         elif renderer == "screenless":
             self.screen = pygame.Surface((self.width, self.height))
         else:
