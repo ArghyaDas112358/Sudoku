@@ -6,5 +6,6 @@
 bool isValidPlacement(std::vector<std::vector<int>>& grid, int row, int col, int num);
 bool solveBoard(std::vector<std::vector<int>>& grid);
 int countSolutions(std::vector<std::vector<int>>& grid);
+std::vector<std::vector<int>> solveBoardReturn(std::vector<std::vector<int>> grid);
 
 #endif

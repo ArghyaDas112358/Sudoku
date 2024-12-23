@@ -2,8 +2,6 @@
 # validator.py
 #################################################################
 
-from copy import deepcopy
-
 def is_unique(numbers):
     """Check if the list contains unique numbers (ignoring None)."""
     nums = [num for num in numbers if num is not None]

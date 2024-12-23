@@ -29,10 +29,10 @@ dy = HEIGHT // 9
 HINT_DURATION = 2  # seconds
 
 DEFAULT_POSITIONS = {
-    "check_button":   [1.0 * dx,    610,    1.5 * dx,     50],
-    "time_display":   [3.27 * dx,   610,    2.5 * dx,     50],
-    "refresh_button": [6.5 * dx,    610,    1.66 * dx,    50],
-    "hint_button":    [6.5 * dx,    665,    1.66 * dx,    50],
+    "check_button":   [1.00 * dx,    610,    1.50 * dx,    50],
+    "time_display":   [3.27 * dx,    610,    2.50 * dx,    50],
+    "refresh_button": [6.50 * dx,    610,    1.66 * dx,    50],
+    "hint_button":    [6.50 * dx,    665,    1.66 * dx,    50],
 }
 
 def theme_to_colors(theme):
@@ -146,7 +146,6 @@ class SudokuDisplay:
                 line_width,
             )
 
-
     def is_hint_active(self):
         # Ensure this function always returns a boolean
         if self.showing_hint and self.hint_start_time is not None:
@@ -157,7 +156,6 @@ class SudokuDisplay:
                 self.showing_hint = False
                 self.hint_start_time = None
         return False
-
 
     def draw_numbers(self):
         # Show the solved numbers when hint is active else show user numbers

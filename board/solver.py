@@ -2,7 +2,7 @@
 # solver.py
 #################################################################
 
-from board.solver_lib import solveBoard, countSolutions, isValidPlacement
+from board.solver_lib import solveBoardReturn, countSolutions, isValidPlacement
 
 def is_valid_placement(sudoku_grid, row, col, num):
     """
@@ -12,10 +12,12 @@ def is_valid_placement(sudoku_grid, row, col, num):
     return isValidPlacement(converted_grid, row, col, num)
 
 def solve_board(sudoku_grid):
-    converted_grid = [[cell if cell is not None else 0 for cell in row] for row in sudoku_grid]
-    solved = solveBoard(converted_grid) # Call the C++ function
-    solved_grid = [[cell if cell != 0 else None for cell in row] for row in converted_grid]
-    return solved_grid if solved else None
+    # Convert Python None → 0
+    converted = [[c if c is not None else 0 for c in row] for row in sudoku_grid]
+    solved_cxx = solveBoardReturn(converted)
+    # Convert 0 → None in the result
+    solved_python = [[c if c != 0 else None for c in row] for row in solved_cxx]
+    return solved_python
 
 def count_solutions(sudoku_grid):
     converted_grid = [[cell if cell is not None else 0 for cell in row] for row in sudoku_grid]

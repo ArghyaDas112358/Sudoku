@@ -120,23 +120,36 @@ def main(theme = "Classic", empty_cells_ratio = 0.7):
 
 def test_run(empty_cells_ratio= 0.3):
     print("Original Board:")
-    sudoku_grid = generate_board(empty_cells_ratio=empty_cells_ratio)
-    display_board_terminal(sudoku_grid)
-
-    # Check solutions
+    # sudoku_grid = [
+    #                 [5, 3, None, None, 7, None, None, None, None],
+    #                 [6, None, None, 1, 9, 5, None, None, None],
+    #                 [None, 9, 8, None, None, None, None, 6, None],
+    #                 [8, None, None, None, 6, None, None, None, 3],
+    #                 [4, None, None, 8, None, 3, None, None, 1],
+    #                 [7, None, None, None, 2, None, None, None, 6],
+    #                 [None, 6, None, None, None, None, 2, 8, None],
+    #                 [None, None, None, 4, 1, 9, None, None, 5],
+    #                 [None, None, None, None, 8, None, None, 7, 9],
+    #             ]
+    sudoku_grid = generate_board_with_one_solution(empty_cells_ratio=empty_cells_ratio)
     solutions = count_solutions(sudoku_grid)
     if solutions == 0:
         print("The Sudoku has no solution.")
     elif solutions == 1:
         print("The Sudoku has a unique solution.")
-        solve_board(sudoku_grid)
-        print("Solved Board:")
+        sudoku_grid_copy = copy.deepcopy(sudoku_grid)
+        assert count_solutions(sudoku_grid_copy) == 1
+        solved_sudoku_grid = solve_board(sudoku_grid_copy)
+
+        print("Original Board:")
         display_board_terminal(sudoku_grid)
+        print("Solved Board:")
+        display_board_terminal(solved_sudoku_grid)
     else:
         print(f"The Sudoku has {solutions} solutions.")
 
 
 if __name__ == "__main__":
     main(theme="Classic", empty_cells_ratio=0.7)
-    # test_run(empty_cells_ratio=0.3)
+    # test_run(empty_cells_ratio=0.7)
 
